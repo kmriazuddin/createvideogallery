@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="img/png" href="./R1.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Gallery</title>
+</head>
+<body>
+    <div class="container text-center">
+		<h1>Pexels Video Gallery</h1>
+		<p>Beautiful video</p>
+		<p>Create By K M Riaz Uddin</p>
+		<p>Date : 5-03-2022</p>
+	</div>
+    <div class="container-video lazy">
+        <div class="video"><video src="./video-1.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-2.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-3.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-4.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-5.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-6.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-7.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-8.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-9.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-10.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-11.mp4" loading="lazy"></video></div>
+        <div class="video"><video src="./video-12.mp4" loading="lazy"></video></div>
+    </div>
+    <div class="popup-video">
+        <span>&times;</span>
+        <video src="./Pexels Videos 2.mp4" loading="lazy" controls></video>
+    </div>
+    <script>
+        document.querySelectorAll('.container-video video').forEach(vid =>{
+            vid.onclick = () =>{
+                document.querySelector('.popup-video').style.display = 'block';
+                document.querySelector('.popup-video video').src = vid.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup-video span').onclick = () =>{
+            document.querySelector('.popup-video').style.display = 'none';
+        }
+    </script>
+
+    <div style="float: right;">
+        <h1 style="text-align: center; margin-bottom: 0px; font-size: 20px;">Visit</h1>
+    <a href="https://www.freecounterstat.com" title="website hit counter"><img src="https://counter4.stat.ovh/private/freecounterstat.php?c=cs2zl4g3f7te7js8zg3a1s9dh27wq8ca" border="0" title="website hit counter" alt="website hit counter"></a>
+    </div>
+</body>
+</html>
